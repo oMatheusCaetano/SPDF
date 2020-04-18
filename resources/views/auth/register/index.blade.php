@@ -4,11 +4,12 @@
 @section('page_content')
     <div class="m-5">
         <div class="container col-lg-5 p-2 bg-white shadow">
-            <form class="bg-white shadow p-5" action="">
+            <form class="bg-white shadow p-5" method="POST" action="{{ route('register.store') }}"> @csrf
                 <div>
                     <h2 class="text-center">Registrar-se</h2>
                     <h6 class="text-center mb-3">Registrar-se no S.PDF</h6>
                 </div>
+                @include('messages.errors')
                 <div class="form-group">
                     <label for="name">Nome</label>
                     <input class="form-control" id="name" name="name" placeholder="Informe o seu nome...">
