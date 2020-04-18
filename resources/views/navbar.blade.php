@@ -14,6 +14,17 @@
                         <a class="nav-link text-secondary" href="{{ route('register.index') }}">Registrar-se</a>
                     </li>
                 @endguest
+                @auth
+                    <div class="dropdown">
+                        <a class="dropdown-toggle text-white" href="#" role="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ $loggedUser->name }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="{{ route('users.edit', ['user' => $loggedUser->id]) }}">Perfil</a>
+                            <a class="dropdown-item text-danger" href="{{ route('login.logout') }}">Sair</a>
+                        </div>
+                    </div>
+                @endauth
             </ul>
         </div>
     </nav>
