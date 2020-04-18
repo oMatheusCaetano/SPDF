@@ -11,7 +11,7 @@ class CreateResponsabilitiesTable extends Migration
     {
         Schema::create('responsabilities', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('reponsability');
+            $table->string('responsability');
             $table->bigInteger('involved_id')->unsigned();
             $table->bigInteger('company_id')->unsigned();
 

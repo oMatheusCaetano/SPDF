@@ -22,4 +22,5 @@ class UsersController extends Controller
         $loggedUser = Auth::user();
         return view('app.users.edit', compact('loggedUser'));
     }
+
 }
