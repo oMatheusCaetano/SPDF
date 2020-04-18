@@ -31,7 +31,8 @@ function createRemoveButton(id) {
 
 function createNameInput() {
     return $('<input />', {
-        class: 'form-control', 
+        class: 'form-control',
+        name: 'involved_name[]',
         placeholder: 'Informe o nome do envolvido...' 
     })
 }
@@ -40,6 +41,7 @@ function createCpfInput() {
     return $('<input />', {
         class: 'form-control col-sm-8',
         id: 'cpf',
+        name: 'involved_cpf[]',
         placeholder: 'Informe o CPF do envolvido...' 
     }).mask("000.000.000-00")
 }
@@ -47,6 +49,7 @@ function createCpfInput() {
 function createInvolvedSelect() {
         return $('<select />', {
         class: 'custom-select',
+        name: 'involved_responsability[]'
     })
 }
 
