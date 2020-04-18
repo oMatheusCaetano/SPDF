@@ -18,7 +18,7 @@
                 @auth
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-secondary" href="{{ route('companies.create') }}">Cadastrar Empresa</a>
+                            <a class="nav-link text-dark" href="{{ route('companies.create') }}">Cadastrar Empresa</a>
                         </li>
                     </ul>
                     <div class="dropdown ml-3">
