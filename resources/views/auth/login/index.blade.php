@@ -4,7 +4,7 @@
 @section('page_content')
     <div class="m-5">
         <div class="container col-lg-5 p-2 bg-white shadow">
-            <form class="bg-white shadow p-5" method="POST" action="{{ route('register.store') }}"> @csrf
+            <form class="bg-white shadow p-5" method="POST" action="{{ route('login.login') }}"> @csrf
                 <div>
                     <h2 class="text-center">Entrar</h2>
                     <h6 class="text-center mb-3">Entrar no S.PDF</h6>
