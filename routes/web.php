@@ -12,3 +12,6 @@ Route::post('/login', 'Auth\LoginController@login')->name('login.login');
 // USERS
 Route::get('/users/{user}/edit', 'App\UsersController@edit')->name('users.edit');
 Route::post('/users/{user}', 'App\UsersController@update')->name('users.update');
+
+// COMPANIES
+Route::get('/companies/create', 'App\CompaniesController@create')->name('companies.create');
