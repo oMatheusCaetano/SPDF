@@ -8,7 +8,7 @@
             <ul class="navbar-nav">
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Entrar</a>
+                        <a class="nav-link text-white" href="{{ route('login.index') }}">Entrar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="{{ route('register.index') }}">Registrar-se</a>
