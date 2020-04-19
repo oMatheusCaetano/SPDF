@@ -15,7 +15,7 @@ class CreateContractsTable extends Migration
             $table->string('file')->unique();
             $table->string('size');
             $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('company_id')->unsigned();
+            $table->bigInteger('company_id')->unsigned()->unique();
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('company_id')->references('id')->on('companies');

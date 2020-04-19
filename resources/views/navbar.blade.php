@@ -20,6 +20,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="{{ route('companies.create') }}">Cadastrar Empresa</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="{{ route('contracts.create') }}">Novo Contrato Social</a>
+                        </li>
                     </ul>
                     <div class="dropdown ml-3">
                         <a class="dropdown-toggle text-white" href="#" role="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

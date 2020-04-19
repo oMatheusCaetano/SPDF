@@ -19,4 +19,9 @@ class Company extends Model
     {
         return $this->belongsToMany(Involved::class, 'company_involved');
     }
+
+    public function contracts()
+    {
+        return $this->hasMany(Contract::class);
+    }
 }

@@ -15,5 +15,8 @@ Route::post('/users/{user}', 'App\UsersController@update')->name('users.update')
 
 // COMPANIES
 Route::get('/companies/create', 'App\CompaniesController@create')->name('companies.create');
-Route::post('/companies/create/{user}', 'App\CompaniesController@store')->name('companies.store');
+Route::post('/companies/store/{user}', 'App\CompaniesController@store')->name('companies.store');
 
+// CONTRACTS
+Route::get('/contracts/create', 'App\ContractsController@create')->name('contracts.create');
+Route::post('/contracts/store/{user}', 'App\ContractsController@store')->name('contracts.store');
