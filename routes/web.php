@@ -18,5 +18,7 @@ Route::get('/companies/create', 'App\CompaniesController@create')->name('compani
 Route::post('/companies/store/{user}', 'App\CompaniesController@store')->name('companies.store');
 
 // CONTRACTS
+Route::get('/contracts', 'App\ContractsController@index')->name('contracts.index')->middleware('auth');
+Route::get('/contracts/{contract}', 'App\ContractsController@show')->name('contracts.show');
 Route::get('/contracts/create', 'App\ContractsController@create')->name('contracts.create');
 Route::post('/contracts/store/{user}', 'App\ContractsController@store')->name('contracts.store');

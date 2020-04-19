@@ -2,13 +2,20 @@
 
 @section('window_title') Cadastrar Empresa | S.PDF @endsection
 @section('page_content')
-    <div class="m-5">
-        <div class="container col-lg-5 p-2 bg-white shadow">
-            <form class="bg-white shadow p-5" method="POST" action="{{ route('companies.store', ['user' => $loggedUser->id ]) }}"> @csrf
-                <div>
-                    <h2 class="text-center">Cadastrar Empresa</h2>
-                    <h6 class="text-center mb-3">Cadastrar Empresa no S.PDF</h6>
-                </div>
+    <main class=" col-lg-6 mx-auto">
+
+        <div class="container bg-white shadow my-4 p-2">
+            <div class=" container bg-white shadow p-2">
+                <hr>
+                <h2 class="text-center">Cadastrar Empresa</h2>
+                <hr>
+            </div>
+        </div>
+
+        <div class="p-2 bg-white shadow">
+            <form class="bg-white shadow px-5 py-4" method="POST" action="{{ route('login.login') }}"> @csrf
+                <h6 class="text-center mb-3">Cadastrar Empresa no S.PDF</h6>
+                <hr>
                 @include('messages.errors')
                 <div class="form-group">
                     <label for="company_name">Razão Social<span class="text-danger">*</span></label>
@@ -36,7 +43,17 @@
                 </div>
             </form>
         </div>
-    </div>
+    </main>
+
+
+
+
+
+
+
+
+
+        
 
     <script src="{{ asset('js/companies/script.js') }}"></script>
 

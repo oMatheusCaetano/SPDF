@@ -18,7 +18,7 @@ class LoginController extends Controller
     {
         return !Auth::attempt($request->only([ 'email', 'password' ]))
             ? redirect()->back()->withErrors('E-mail e/ou senha inválidos')
-            :  redirect()->route('users.edit', ['user' => Auth::user()->id]);
+            :  redirect()->route('contracts.index', ['user' => Auth::user()->id]);
     }
 
     public function logout()
