@@ -11,23 +11,26 @@
                 </div>
                 @include('messages.errors')
                 <div class="form-group">
-                    <label for="name">Nome</label>
+                    <label for="name">Nome<span class="text-danger">*</span></label>
                     <input class="form-control" id="name" name="name" value="{{ $loggedUser->name }}" placeholder="Informe o seu nome...">
                 </div>
                 <div class="form-group">
-                    <label for="email">E-mail</label>
+                    <label for="email">E-mail<span class="text-danger">*</span></label>
                     <input class="form-control" id="email" name="email" type="email" value="{{ $loggedUser->email }}" placeholder="Informe o seu e-mail...">
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <label for="password">Password<span class="text-danger">*</span></label>
                     <input class="form-control" id="password" name="password" type="password" placeholder="Informe a senha de acesso...">
                 </div>
                 <div class="form-group">
-                    <label for="password_confirmation">Repetir Senha</label>
+                    <label for="password_confirmation">Repetir Senha<span class="text-danger">*</span></label>
                     <input class="form-control" id="password_confirmation" name="password_confirmation" type="password" placeholder="Repita a senha de acesso...">
                 </div>
                 <div class="form-group">
                     <button class="btn btn-info">Salvar Alterações</button>
+                </div>
+                <div class="d-block float-right">
+                    <span class="text-danger">* </span><small class="text-secondary">Campos Obrigatórios</small>
                 </div>
             </form>
         </div>

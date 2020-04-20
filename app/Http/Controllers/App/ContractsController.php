@@ -32,6 +32,7 @@ class ContractsController extends Controller
     
     public function create()
     {
+        echo 'TESTe'; exit();
         $loggedUser = Auth::user();
         $companies = Company::query()->orderBy('company_name')->get();
         return view('app.contracts.create', compact('loggedUser', 'companies'));

@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers\App;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\CompaniesFormRequest;
-use App\Services\CreateCompany;
 use App\User;
+use Illuminate\Http\Request;
+use App\Services\CreateCompany;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\CompaniesFormRequest;
 
 class CompaniesController extends Controller
 {
     
-    public function create()
+    public function create(Request $request)
     {
         $loggedUser = Auth::user();
-        return view('app.companies.create', compact('loggedUser'));
+        $returnMessage = $request->session()->get('returnMessage');
+        return view('app.companies.create', compact('loggedUser', 'returnMessage'));
     }
 
     public function store(User $user, CompaniesFormRequest $companiesFormRequest, CreateCompany $createCompany)
@@ -24,6 +26,8 @@ class CompaniesController extends Controller
             'involved_cpf' => $companiesFormRequest['involved_cpf'],
             'involved_responsability' => $companiesFormRequest['involved_responsability']
         ];
-        echo $createCompany->create($user, $companiesFormRequest->all(), $involvedData);
+        $createCompany->create($user, $companiesFormRequest->all(), $involvedData);
+        $companiesFormRequest->session()->flash('returnMessage', "Empresa Criada com Sucesso.");
+        return redirect()->back();
     }
 }

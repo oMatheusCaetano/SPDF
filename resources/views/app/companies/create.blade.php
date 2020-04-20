@@ -13,10 +13,11 @@
         </div>
 
         <div class="p-2 bg-white shadow">
-            <form class="bg-white shadow px-5 py-4" method="POST" action="{{ route('login.login') }}"> @csrf
+            <form class="bg-white shadow px-5 py-4" method="POST" action="{{ route('companies.store', ['user' => $loggedUser->id]) }}"> @csrf
                 <h6 class="text-center mb-3">Cadastrar Empresa no S.PDF</h6>
                 <hr>
                 @include('messages.errors')
+                @include('messages.returnMessage')
                 <div class="form-group">
                     <label for="company_name">Razão Social<span class="text-danger">*</span></label>
                     <input class="form-control" id="company_name" name="company_name" placeholder="Informe a Razão Social da empresa...">
