@@ -1,5 +1,5 @@
 body {
-  background-image: -webkit-gradient(linear, left top, right top, from(#21c3cf), to(#2ab890));
-  background-image: linear-gradient(to right, #21c3cf, #2ab890);
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(141deg, #63b7af -10%, #347474 55%, #004445 90%);
 }
-/*# sourceMappingURL=style.css.map */

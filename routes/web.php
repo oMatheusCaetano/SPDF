@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Routing\Route;
+
+Route::get('/', function () { return redirect()->route('contracts.index'); });
+
 // REGISTER
 Route::get('/register', 'Auth\RegisterController@index')->name('register.index');
 Route::post('/register', 'Auth\RegisterController@store')->name('register.store');

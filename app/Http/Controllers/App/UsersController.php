@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\App;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\UsersFormRequest;
 use App\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\UsersFormRequest;
 
 class UsersController extends Controller
 {

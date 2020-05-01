@@ -2,10 +2,10 @@
 
 namespace App\Services;
 
-use App\Company;
-use App\Involved;
-use App\Responsability;
 use App\User;
+use App\Involved;
+use App\Company;
+use App\Responsability;
 use Illuminate\Support\Facades\DB;
 
 class CreateCompany

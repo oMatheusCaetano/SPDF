@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers\App;
 
-use App\Company;
-use App\Contract;
-use App\Http\Controllers\Controller;
-use App\Services\CreateContract;
 use App\User;
+use App\Contract;
+use App\Company;
 use Illuminate\Http\Request;
+use App\Services\CreateContract;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 
 class ContractsController extends Controller
 {
@@ -41,10 +40,13 @@ class ContractsController extends Controller
     {
         $validExtentions = ['pdf'];
         $contract = $request->contract;
+
         if (!$request->hasFile('contract') || !$contract->isValid())
             return redirect()->back()->withErrors('Falha ao fazer upload, tente novamente');
+
         if (!in_array($contract->getClientOriginalExtension(), $validExtentions)) 
             return redirect()->back()->withErrors('Extensão do arquivo é inválida. Favor selecionar um arquivo PDF Ex: meu-arquivo.pdf');
+
         $file = uniqid() . ".{$contract->getClientOriginalExtension()}";
         $contract->storeAs('contracts', $file);
         $createContract->create($user, $file, $request->company, $contract);

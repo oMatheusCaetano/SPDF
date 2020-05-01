@@ -2,8 +2,8 @@
 
 namespace App\Services;
 
-use App\Contract;
 use App\User;
+use App\Contract;
 use Illuminate\Support\Facades\DB;
 
 class CreateContract
@@ -13,7 +13,7 @@ class CreateContract
     {
         DB::beginTransaction();
         $name = $contract->getClientOriginalName();
-        $size =  $contract->getClientSize();
+        $size =  $contract->getSize();
         $user_id = $user->id;
         $company_id = $companyId;
         $contract = Contract::create(compact('name', 'file', 'size', 'user_id', 'company_id'));
