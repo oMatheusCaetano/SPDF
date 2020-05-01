@@ -29,4 +29,10 @@ docker-compose exec spdf-laravel php artisan key:generate
 ```
 <small>**obs:** Caso o comando ```docker-compose up -d ``` tenha sido executado sem a flag ``` -d ```, recomendo que o terminal do container seja acessado em uma nova aba do terminal da máquina host para não parar a execução da aplicação. </small>
 
+Por último, será preciso criar um link simbólico entre algumas pastas da aplicação para que a rederização de arquivos funcione. Para isso execute o seguinde comando.
+```sh
+docker-compose exec spdf-laravel php artisan storage:link
+```
+
 Após executar este comando, basta acessar a aplicação. Por padrão, quando estiver executando com [Docker](https://www.docker.com/), a aplicação irá rodar no endpoint: ``` http://localhost:3000 ```.
+
