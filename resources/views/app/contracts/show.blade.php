@@ -39,7 +39,7 @@
                                 <div class="shadow-sm bg-light pt-2 pb-1 px-2 mb-2">
                                     <p class="">Nome: {{ $involved->name }}</p>
                                     <p class="">CPF: {{ $involved->cpf }}</p>
-                                    <p class="">Responsabilidade: {{ $involved->name }}</p>
+                                    <p class="">Responsabilidade: {{ $involved->responsabilities[0]->responsability }}</p>
                                 </div>
                             @endforeach
                         </div>
