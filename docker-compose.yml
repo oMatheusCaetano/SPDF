@@ -21,6 +21,7 @@ services:
             - mariadb
         ports:
             - 3000:3000
+            - 3001:8000
         volumes:
             - ./:/app
         # privileged: true # Privileged mode could be required to run this container under Windows
